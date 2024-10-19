@@ -3,51 +3,27 @@ import { View, Text, Image, TouchableOpacity, StyleSheet, ScrollView, StatusBar 
 import TopTab from './ProfileTab';
 export default function ProfileScreen({ navigation }) {
     return (
-<>
         <View style={styles.container}>
+            <View style={styles.profileContainer}>
+                <Image source={{ uri: 'https://static.vecteezy.com/system/resources/thumbnails/027/951/137/small_2x/stylish-spectacles-guy-3d-avatar-character-illustrations-png.png' }} style={styles.profileImage} />
 
-            {/* <ScrollView> */}
-                <View style={styles.profileContainer}>
-                    <Image source={{ uri: 'https://static.vecteezy.com/system/resources/thumbnails/027/951/137/small_2x/stylish-spectacles-guy-3d-avatar-character-illustrations-png.png' }} style={styles.profileImage} />
-
-                    <View>
-                        <Text style={styles.username}>Farhan Aziz</Text>
-                        <Text style={styles.follower}>4 followers • 22 following</Text>
-                    </View>
+                <View>
+                    <Text style={styles.username}>Farhan Aziz</Text>
+                    <Text style={styles.follower}>4 followers • 22 following</Text>
                 </View>
+            </View>
 
-                <View style={styles.editContainer}>
-                    <TouchableOpacity onPress={() => navigation.navigate('EditProfile')}>
-                        <Text style={styles.post1}>Edit profile</Text>
-                    </TouchableOpacity>
-                    <TouchableOpacity onPress={() => navigation.navigate('Bookmark')}>
-                        <Text style={styles.post}>Create posts</Text>
-                    </TouchableOpacity>
-                </View>
+            <View style={styles.editContainer}>
+                <TouchableOpacity onPress={() => navigation.navigate('EditProfile')}>
+                    <Text style={styles.post1}>Edit profile</Text>
+                </TouchableOpacity>
+                <TouchableOpacity onPress={() => navigation.navigate('Bookmark')}>
+                    <Text style={styles.post}>Create posts</Text>
+                </TouchableOpacity>
+            </View>
             <StatusBar barStyle="light" />
             <TopTab />
         </View>
-
-                
-                </>
-                /* <View style={styles.postContainer}>
-                    <TouchableOpacity>
-                        <Text style={styles.posts}>Stories</Text>
-                    </TouchableOpacity>
-                    <TouchableOpacity>
-                        <Text style={styles.posts}>Lists</Text>
-                    </TouchableOpacity>
-                    <TouchableOpacity>
-                        <Text style={styles.posts}>About</Text>
-                    </TouchableOpacity>
-                </View> */
-
-                /* <View style={styles.postSection}>
-                   <Text style={styles.noPost}>You don't have any posts</Text>
-                </View> */
-            /* </ScrollView> */
-
-
     );
 };
 
