@@ -1,12 +1,15 @@
-import Navigation from "./src/Navigation/routes"
-import { NavigationContainer } from "@react-navigation/native";
+import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import Routes from './src/Navigation/Routes';
+import App from './src/Navigation/screens/BottomTab';
+function Apps() {
 
-function App() {
   return (
     <NavigationContainer>
-      <Navigation />
+      <Routes />
+      {/* <App /> */}
     </NavigationContainer>
-  );
+  )
 }
 
-export default App;
+export default Apps
